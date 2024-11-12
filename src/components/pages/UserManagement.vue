@@ -1,11 +1,11 @@
 <template>
-<div class="flex flex-col items-center justify-center min-h-screen mx-auto">
-    <div class="container p-4">
+<div class="">
+    <div class="container p-4 flex flex-col items-center h-[90vh] justify-center">
         <!-- Titre centré -->
         <h1 class="text-3xl font-bold mb-6 flex justify-center text-white">Qui est-ce ?</h1>
 
         <!-- Grille des cartes utilisateurs et du bouton Ajouter un Profil -->
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+        <div class="grid grid-cols-5 gap-4">
             <!-- Cartes utilisateurs -->
             <UserCard v-for="user in users" :key="user.id" :user="user" :editMode="editMode" @edit="editUser"
                 class="max-w-xs mx-auto" />
