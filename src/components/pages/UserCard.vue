@@ -1,12 +1,12 @@
 <template>
     <div class=" p-2 relative ">
-
-      <img :src="user.avatar" :alt="user.name"
-        class="w-22 h-22  mx-auto mb-2 rounded-md  border border-gray-500 hover:border-white   transition duration-300">
+      <div class="class">
+        <img :src="user.avatar" :alt="user.name"
+        class="w-15 h-15  mx-auto mb-2 rounded-md  border border-gray-500 hover:border-white   transition duration-300">
       <p class="text-sm font-semibold text-center">{{ user.name }}</p>
+      </div>
 
-
-      <button v-if="editMode" @click="$emit('edit', user.id)"
+      <button v-if="editMode"
         class="absolute top-12 right-12 text-white-300 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
         aria-label="Modifier l'utilisateur">
         <PencilIcon class="w-6 h-6 flex justify-center" />
@@ -30,6 +30,7 @@ defineProps({
 })
 
 defineEmits(['edit'])
+
 </script>
 
 <style>

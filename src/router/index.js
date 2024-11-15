@@ -1,29 +1,23 @@
+// router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
-import UserManagement from '../components/pages/UserManagement.vue';
-import UserDetails from '../components/pages/UserDetails.vue';
-import AddUser from '../components/pages/AddUser.vue';
+import Browse from '../components/pages/Browse.vue';
 
 const routes = [
-  { 
-    path: '/', 
-    name: 'UserManagement',
-    component: UserManagement 
+  {
+    path: '/',
+    name: 'Browse',
+    component: Browse,
   },
-  { 
-    path: '/user/:id', 
-    name: 'UserDetails',
-    component: UserDetails 
+  {
+    path: '/ManageProfils',
+    name: 'ManageProfils',
+    component: Browse, // Réutilise le même composant mais avec un paramètre d'édition
   },
-  { 
-    path: '/user/new', 
-    name: 'AddUser',
-    component: AddUser 
-  }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 });
 
 export default router;
