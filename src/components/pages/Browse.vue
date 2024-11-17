@@ -2,7 +2,7 @@
     <div class="container p-4 flex flex-col items-center h-[90vh] justify-center">
         <!-- Titre -->
         <h1 class="text-3xl font-bold mb-6 text-white">
-            {{ editMode ? "Gérer les Profils" : "Liste des Profils" }}
+            {{ editMode ? "Gérer les Profils" : "Qui est-ce ?" }}
         </h1>
 
         <!-- Grille des cartes utilisateurs -->
@@ -48,13 +48,14 @@
                             N'affiche que les séries et films adaptés aux enfants
                         </p>
                     </div>
-                    <div
+                    <toggle/>
+                    <!-- <div
                         class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
                         <input type="checkbox" name="toggle" id="toggle"
                             class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-gray-500 border-4 appearance-none cursor-pointer" />
                         <label for="toggle"
                             class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
-                    </div>
+                    </div> -->
                 </div>
 
                 <button class="bg-white text-black fw-bold py-2 px-4 rounded w-full" @click="saveProfile">
@@ -85,6 +86,9 @@
 import { ref, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import UserCard from "./UserCard.vue";
+import toggle from "./toggle.vue";
+
+
 
 const router = useRouter();
 const route = useRoute();

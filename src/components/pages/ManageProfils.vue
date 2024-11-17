@@ -25,7 +25,7 @@
         </div>
 
         <!-- Modale -->
-        <Modal v-if="isModalOpen" @close="closeModal" :data="data" class="h-screen"/>
+        <Modal v-if="isModalOpen" @close="closeModal" :data="data" />
         <!-- Bouton "Gérer les profils" -->
         <div class="mt-4">
             <button @click="toggleEditMode" class="border hover:bg-yellow-600 text-white font-bold py-2 px-4">
