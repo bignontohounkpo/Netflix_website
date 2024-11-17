@@ -23,63 +23,51 @@
 
         <!-- Modale -->
         <div v-if="isModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-[#161616] p-10 rounded-sm shadow-lg w-[40%]  mx-auto border border-gray-100 relative ">
-        <!-- Bouton "X" -->
-        <button
-            class="absolute top-2 right-2 text-white-400 hover:text-gray text-2xl font-bold"
-            @click="isModalOpen = false"
-        >
-            &times;
-        </button>
+            <div class="bg-[#161616] p-10 rounded-sm shadow-lg w-[40%]  mx-auto border border-gray-100 relative ">
+                <!-- Bouton "X" -->
+                <button class="absolute top-2 right-2 text-white-400 hover:text-gray text-2xl font-bold"
+                    @click="isModalOpen = false">
+                    &times;
+                </button>
 
-        <h2 class="font-bold text-2xl mb-4 text-center text-white">Ajouter un profil</h2>
-        <p class="mb-4 text-white">Ajouter un profil pour un nouvel utilisateur Netflix</p>
+                <h2 class="font-bold text-2xl mb-4 text-center text-white">Ajouter un profil</h2>
+                <p class="mb-4 text-white">Ajouter un profil pour un nouvel utilisateur Netflix</p>
 
-        <div class="flex gap-4 items-center mb-4">
-            <img src="/images/user5.jpg" alt="profil" class="w-14 h-14 " />
-                <input
-                    type="text"
-                    placeholder="Nom"
-                    class="w-full border bg-[#161616] border-gray-300 p-2 rounded"
-                />
-        </div>
+                <div class="flex gap-4 items-center mb-4">
+                    <img src="/images/user5.jpg" alt="profil" class="w-14 h-14 " />
+                    <input type="text" placeholder="Nom"
+                        class="w-full border bg-[#161616] border-gray-300 p-2 rounded" />
+                </div>
 
-        <hr class="mb-4 text-gray-100" />
+                <hr class="mb-4 text-gray-100" />
 
-        <div class="flex items-center mb-4 gap-5">
-            <div class="flex-1">
-                <h3 class="font-bold text-white">Profil Jeunesse</h3>
-                <p class="text-sm text-gray-400">
-                    N'affiche que les séries et films adaptés aux enfants
-                </p>
+                <div class="flex items-center mb-4 gap-5">
+                    <div class="flex-1">
+                        <h3 class="font-bold text-white">Profil Jeunesse</h3>
+                        <p class="text-sm text-gray-400">
+                            N'affiche que les séries et films adaptés aux enfants
+                        </p>
+                    </div>
+                    <div
+                        class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" name="toggle" id="toggle"
+                            class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-gray-500 border-4 appearance-none cursor-pointer" />
+                        <label for="toggle"
+                            class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                    </div>
+                </div>
+
+                <button class="bg-white text-black fw-bold py-2 px-4 rounded w-full" @click="saveProfile">
+                    Enregistrer
+                </button>
+
+                <div class="flex gap-4">
+                    <button class="text-white py-2 px-4 rounded w-full" @click="isModalOpen = false">
+                        Annuler
+                    </button>
+                </div>
             </div>
-            <div
-                class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in"
-            >
-                <input
-                    type="checkbox"
-                    name="toggle"
-                    id="toggle"
-                    class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-gray-500 border-4 appearance-none cursor-pointer"
-                />
-                <label
-                    for="toggle"
-                    class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
-                ></label>
-            </div>
         </div>
-
-        <button class="bg-white text-black fw-bold py-2 px-4 rounded w-full" @click="saveProfile">
-            Enregistrer
-        </button>
-
-        <div class="flex gap-4">
-            <button class="text-white py-2 px-4 rounded w-full" @click="isModalOpen = false">
-                Annuler
-            </button>
-        </div>
-    </div>
-</div>
 
 
         <!-- Bouton "Gérer les profils" -->

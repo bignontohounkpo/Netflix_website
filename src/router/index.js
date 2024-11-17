@@ -1,6 +1,7 @@
 // router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
 import Browse from '../components/pages/Browse.vue';
+import ManageProfils from '../components/pages/ManageProfils.vue';
 
 const routes = [
   {
@@ -11,7 +12,7 @@ const routes = [
   {
     path: '/ManageProfils',
     name: 'ManageProfils',
-    component: Browse, // Réutilise le même composant mais avec un paramètre d'édition
+    component: ManageProfils, // Réutilise le même composant mais avec un paramètre d'édition
   },
 ];
 
