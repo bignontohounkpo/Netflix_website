@@ -58,12 +58,12 @@
                     </div> -->
                 </div>
 
-                <button class="bg-white text-black fw-bold py-2 px-4 rounded w-full" @click="saveProfile">
+                <button class="bg-white text-black fw-bold  rounded w-full" @click="saveProfile">
                     Enregistrer
                 </button>
 
                 <div class="flex gap-4">
-                    <button class="text-white py-2 px-4 rounded w-full" @click="isModalOpen = false">
+                    <button class="text-white rounded w-full" @click="isModalOpen = false">
                         Annuler
                     </button>
                 </div>
